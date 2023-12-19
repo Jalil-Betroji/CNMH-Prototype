@@ -15,13 +15,13 @@ class UserSeeder extends Seeder
     public function run()
     {
         $user = User::create([
-            'name' => 'soufiane',
-            'email' => 'soufiane@gmail.com',
-            'role' => 'project-leader',
+            'name' => 'jalil',
+            'email' => 'jalil@gmail.com',
+            'role' => 'chef-de-projet',
             'password' => Hash::make('admin'),
             'created_at' => now(),
             'updated_at' => now()
-        ])->assignRole('project-leader');
+        ])->assignRole('chef-de-projet');
 
         $permissionsLeader = [
             'create-ProjectController',
@@ -58,10 +58,10 @@ class UserSeeder extends Seeder
 
 
         $member = User::create([
-            'name' => 'amine',
-            'email' => 'amine@gmail.com',
+            'name' => 'membre',
+            'email' => 'membre@gmail.com',
             'role' => 'member',
-            'password' => Hash::make('admin'),
+            'password' => Hash::make('member'),
             'created_at' => now(),
             'updated_at' => now()
         ])->assignRole('member');
